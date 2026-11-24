@@ -1,0 +1,36 @@
+{
+  "label_definition": {
+    "temperate": 0,
+    "virulent": 1
+  },
+  "threshold": 0.5,
+  "random_state": 42,
+  "device_used_for_training": "cuda:0",
+  "training_corpus": "unique sequence IDs from all generated_data fold_1..fold_5 train+test H5 files",
+  "merged": {
+    "params": {
+      "learning_rate": 0.15,
+      "max_depth": 7,
+      "n_estimators": 500
+    },
+    "samples": 242955,
+    "duplicate_rows_removed": 734,
+    "features": 5376,
+    "feature_order": [
+      "ESM2",
+      "Evo2"
+    ]
+  },
+  "evo2": {
+    "params": {
+      "learning_rate": 0.15,
+      "max_depth": 6,
+      "n_estimators": 500
+    },
+    "samples": 242991,
+    "duplicate_rows_removed": 734,
+    "features": 4096
+  },
+  "prediction_routing": "merged when both ESM2 and Evo2 exist; otherwise Evo2",
+  "cv_test_metrics_note": "Final models use the complete CV corpus, so these predictions are in-sample and are not unbiased validation metrics."
+}
