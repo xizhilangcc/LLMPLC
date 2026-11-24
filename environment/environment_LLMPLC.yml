@@ -1,0 +1,19 @@
+name: LLMPLC
+channels:
+  - conda-forge
+  - bioconda
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - prodigal=2.6.3
+  - pytorch=2.7.1=cuda129_mkl_py311_hddefad9_304
+  - cuda-version=12.9
+  - cuda-nvcc=12.9
+  - triton=3.3.1
+  - transformer-engine-torch=2.3=py311hc578e56_1
+  - numpy=2.3.3
+  - ninja
+  - cmake
+  - packaging
